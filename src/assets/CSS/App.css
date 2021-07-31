@@ -1,0 +1,70 @@
+.top-bar {
+  height: 65px;
+  border-bottom: solid #e4e4e4 1px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100vw;
+  z-index: 2;
+}
+
+.logo {
+  height: 60%;
+}
+
+.hero {
+  height: 65vh;
+  margin-top: 65px;
+}
+
+.hero-photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.call-to-action {
+  width: 400px;
+  height: 260px;
+  background-color: #fff;
+  position: absolute;
+  top: 230px;
+}
+
+.offer-img {
+  height: 325px;
+  width: 195px;
+  object-fit: cover;
+}
+
+.offer-container {
+  background-color: #e4e4e4;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box1,
+.box2 {
+  height: 75vh;
+  width: 55vh;
+}
+
+.box1 > img {
+  width: 100%;
+  height: 100%;
+}
+
+.box2 {
+  background-color: #fff;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
