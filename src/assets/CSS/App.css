@@ -1,41 +1,234 @@
-.top-bar {
-  height: 65px;
-  border-bottom: solid #e4e4e4 1px;
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: #fff;
   position: fixed;
   top: 0;
-  background-color: #fff;
-  width: 100vw;
+  left: 0;
+  right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   z-index: 2;
+  height: 65px;
+  border-bottom: solid #e4e4e4 1px;
+}
+
+.top-bar {
+  max-width: 1280px;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  line-height: 65px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.top-bar > form {
+  width: 40%;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  opacity: 0.3;
+}
+
+.top-bar > form > input {
+  width: 80%;
+  height: 35px;
+  padding-left: 40px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #f5f6f7;
+  border: transparent;
+  border-radius: 5px;
+  color: black;
+}
+
+.top-bar > form > input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.top-bar > form > input:focus {
+  outline: none;
+}
+
+.login-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.login-buttons > a:hover {
+  cursor: auto;
+}
+
+.signup,
+.login,
+.sell,
+.logout {
+  height: 30px;
+  width: 115px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.signup:hover,
+.login:hover,
+.sell:hover,
+.logout:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup {
+  margin-right: 30px;
+}
+
+.sell-button {
+  display: flex;
+  align-items: center;
+}
+
+.signup,
+.login,
+.logout {
+  background-color: #fff;
+  color: #2cb1ba;
+  border: solid 1px #2cb1ba;
+  border-radius: 5px;
+}
+
+.sell {
+  background-color: #2cb1ba;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 5px;
 }
 
 .logo {
   height: 60%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .hero {
   height: 65vh;
   margin-top: 65px;
+  background-image: url(../images/Vinted_hero.jpg);
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  margin-bottom: 30px;
 }
 
-.hero-photo {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.tear-effect {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  z-index: 1;
+}
+
+.hero-container {
   position: relative;
+  height: 100%;
+  max-width: 1280px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .call-to-action {
-  width: 400px;
-  height: 260px;
+  width: 352px;
+  height: 152px;
   background-color: #fff;
   position: absolute;
-  top: 230px;
+  top: 85px;
+  display: flex;
+  flex-direction: column;
+  padding: 54px 24px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px;
+}
+
+.call-to-action > h1 {
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.call-to-action > button {
+  line-height: 40px;
+  font-size: 16px;
+  font-family: inherit;
+  width: 185px;
+  background-color: #2cb1ba;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 5px;
+}
+
+.call-to-action > button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.offer {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: solid#e4e4e4 2px;
+}
+
+.offer > .card {
+  margin: 0 15px 30px 15px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px;
 }
 
 .offer-img {
   height: 325px;
   width: 195px;
   object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-left: 4px;
+}
+
+.card > p {
+  font-size: 10px;
+  color: grey;
+  margin-left: 4px;
+  margin-bottom: 4px;
 }
 
 .offer-container {
@@ -61,10 +254,41 @@
   background-color: #fff;
 }
 
+.details {
+  margin: 40px 40px 80px 40px;
+}
+
+.price {
+  margin-left: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.key-value {
+  display: flex;
+  justify-content: space-between;
+}
+
 .signup-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 300px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.publish-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }

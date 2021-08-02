@@ -1,5 +1,6 @@
 import vintedLogo from "../assets/images/Vinted_logo.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = ({ userToken, setUser }) => {
   return (
@@ -10,22 +11,29 @@ const Header = ({ userToken, setUser }) => {
         </Link>
         <form>
           <input type="text" placeholder="Recherche des articles" />
+          <FontAwesomeIcon icon="search" className="searchIcon" />
         </form>
         {userToken ? (
           <Link to="/">
-            <button>Se déconnecter</button>
+            <button onClick={() => setUser(null)} className="logout">
+              Se déconnecter
+            </button>
           </Link>
         ) : (
-          <div>
+          <div className="login-buttons">
             <Link to="/signup">
-              <button>S'inscrire</button>
+              <button className="signup">S'inscrire</button>
             </Link>{" "}
             <Link to="/login">
-              <button>Se connecter</button>
+              <button className="login">Se connecter</button>
             </Link>
           </div>
         )}
-        <button>Vends tes articles</button>
+        <div className="sell-button">
+          <Link to="/publish">
+            <button className="sell">Vends tes articles</button>
+          </Link>
+        </div>
       </div>
     </header>
   );

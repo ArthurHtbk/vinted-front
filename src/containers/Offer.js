@@ -33,14 +33,14 @@ const Offer = () => {
       </div>
       <div className="box2">
         <div className="details">
-          <h3>{data.product_price} €</h3>
+          <h3 className="price">{data.product_price} €</h3>
           <ul>
             {data.product_details.map((detail, index) => {
               const keys = Object.keys(detail);
               return (
-                <li key={index}>
-                  <span>{keys[0]}</span>
-                  <span>{detail[keys[0]]}</span>
+                <li key={index} className="key-value">
+                  <span className="key">{keys[0]}</span>
+                  <span className="value">{detail[keys[0]]}</span>
                 </li>
               );
             })}

@@ -7,6 +7,10 @@ import Home from "./containers/Home";
 import Offer from "./containers/Offer";
 import Signup from "./containers/Signup";
 import Login from "./containers/Login";
+import Publish from "./containers/Publish";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch);
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -33,10 +37,13 @@ function App() {
           <Offer />
         </Route>
         <Route path="/signup">
-          <Signup />
+          <Signup setUser={setUser} />
         </Route>
         <Route path="/login">
-          <Login />
+          <Login setUser={setUser} />
+        </Route>
+        <Route path="/publish">
+          <Publish userToken={userToken} />
         </Route>
         <Route path="/">
           <Home />
