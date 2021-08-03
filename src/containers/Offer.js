@@ -48,10 +48,10 @@ const Offer = () => {
         </div>
         <div className="info">
           <h4>{data.product_name}</h4>
-          <p>{data.product_description}</p>
+          <p className="description">{data.product_description}</p>
           <p className="owner">{data.owner.account.username}</p>
+          <button>Acheter</button>
         </div>
-        <button>Acheter</button>
       </div>
     </div>
   );

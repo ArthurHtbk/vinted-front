@@ -47,83 +47,95 @@ const Publish = ({ userToken }) => {
   };
 
   return userToken ? (
-    <div className="publish-form">
-      <h1>Vends ton article</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="file"
-            onChange={(event) => {
-              setPicture(event.target.files);
-            }}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Titre"
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-          />
-          <textarea
-            placeholder="Décris ton article"
-            onChange={(event) => {
-              setDescription(event.target.value);
-            }}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Marque"
-            onChange={(event) => {
-              setBrand(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Taille"
-            onChange={(event) => {
-              setSize(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Couleur"
-            onChange={(event) => {
-              setColor(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="État"
-            onChange={(event) => {
-              setCondition(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Lieu"
-            onChange={(event) => {
-              setCity(event.target.value);
-            }}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Prix"
-            onChange={(event) => {
-              setPrice(event.target.value);
-            }}
-          />
-          <span>Je suis intéressé·e par les échanges</span>
-          <input type="checkbox" />
-        </div>
-        <button type="submit">Ajouter</button>
-      </form>
-      {data && <img src={data.secure_url} alt="" />}
+    <div className="publish-container">
+      <div className="publish-form">
+        <h1>Vends ton article</h1>
+        <form onSubmit={handleSubmit} className="form-section">
+          <div className="input-section">
+            <div className="file-area">
+              <label htmlFor="input-file" className="label-file">
+                Ajoute une photo
+              </label>
+              <input
+                id="input-file"
+                type="file"
+                onChange={(event) => {
+                  setPicture(event.target.files[0]);
+                }}
+              />
+            </div>
+          </div>
+          <div className="input-section">
+            <input
+              type="text"
+              placeholder="Titre"
+              onChange={(event) => {
+                setTitle(event.target.value);
+              }}
+            />
+            <textarea
+              placeholder="Décris ton article"
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-section">
+            <input
+              type="text"
+              placeholder="Marque"
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Taille"
+              onChange={(event) => {
+                setSize(event.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Couleur"
+              onChange={(event) => {
+                setColor(event.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="État"
+              onChange={(event) => {
+                setCondition(event.target.value);
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Lieu"
+              onChange={(event) => {
+                setCity(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-section">
+            <input
+              type="text"
+              placeholder="Prix"
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
+            />
+            <div className="exchange-box">
+              <p>Je suis intéressé·e par les échanges</p>
+              <input type="checkbox" id="exchange" />
+            </div>
+          </div>
+          <div className="button-box">
+            <button type="submit">Ajouter</button>
+          </div>
+        </form>
+        {data && <img src={data.secure_url} alt="" />}
+      </div>
     </div>
   ) : (
     <Redirect to="/login" />

@@ -83,6 +83,7 @@ header {
 .signup:hover,
 .login:hover,
 .sell:hover,
+.sell-now:hover,
 .logout:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -166,7 +167,7 @@ header {
   margin-bottom: 40px;
 }
 
-.call-to-action > button {
+.sell-now {
   line-height: 40px;
   font-size: 16px;
   font-family: inherit;
@@ -243,6 +244,7 @@ h3 {
 .box2 {
   height: 75vh;
   width: 55vh;
+  box-shadow: 0 0 10px #c1c1c1;
 }
 
 .box1 > img {
@@ -252,10 +254,18 @@ h3 {
 
 .box2 {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.details,
+.info {
+  margin: 40px;
+  flex: 1 1;
 }
 
 .details {
-  margin: 40px 40px 80px 40px;
+  border-bottom: solid 1px #c1c1c1;
 }
 
 .price {
@@ -266,7 +276,57 @@ h3 {
 
 .key-value {
   display: flex;
-  justify-content: space-between;
+}
+
+.key,
+.value {
+  flex: 1 1;
+  margin-bottom: 10px;
+}
+
+.key {
+  color: #999;
+}
+
+.value {
+  color: #666;
+  font-weight: 700;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 40px;
+  border-top: solid 1px #c1c1c1;
+}
+
+.info > h4 {
+  font-weight: 700;
+}
+
+.description {
+  color: #666;
+}
+
+.owner {
+  color: black;
+  text-decoration: underline;
+}
+
+.info > button {
+  background-color: #2cb1ba;
+  color: #fff;
+  border: transparent;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+.info > button:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .signup-form {
@@ -274,7 +334,55 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
+  margin-top: 200px;
+}
+
+.signup-form > h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.signup-form > input {
+  height: 35px;
+  width: 275px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: solid 1px #fcced3;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.signup-form > input:focus {
+  outline: none;
+}
+
+.signup-form > input::placeholder {
+  color: #cbcccd;
+}
+
+.signup-form > button {
+  margin-top: 20px;
+  height: 45px;
+  width: 275px;
+  font-family: inherit;
+  font-size: 17px;
+  border: transparent;
+  background-color: #2cb1ba;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.signup-form > button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.other-form {
+  text-decoration: none;
+  font-size: 12px;
+  color: #2cb1ba;
+  margin-bottom: 40px;
 }
 
 .login-form {
@@ -282,7 +390,52 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 300px;
+  margin-top: 200px;
+}
+
+.login-form > h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.login-form > input {
+  height: 35px;
+  width: 275px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: solid 1px #fcced3;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.login-form > input:focus {
+  outline: none;
+}
+
+.login-form > input::placeholder {
+  color: #cbcccd;
+}
+
+.login-form > button {
+  margin-top: 20px;
+  height: 45px;
+  width: 275px;
+  font-family: inherit;
+  font-size: 17px;
+  border: transparent;
+  background-color: #2cb1ba;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.login-form > button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.publish-container {
+  background-color: #ebedee;
 }
 
 .publish-form {
@@ -290,5 +443,132 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 65px;
+}
+
+.publish-form > h1 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  background-color: #fff;
+  padding: 50px;
+  width: 50vw;
+  box-shadow: 0 0 10px #c1c1c1;
+}
+
+.input-section > input,
+textarea {
+  height: 35px;
+  width: 275px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: solid 1px #fcced3;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.input-section > input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.file-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #2cb1ba;
+  width: 135px;
+  border-radius: 5px;
+  height: 45px;
+}
+
+.label-file {
+  cursor: pointer;
+  font-weight: 700;
+  color: #2cb1ba;
+  height: 47px;
+  line-height: 47px;
+}
+
+#input-file {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.exchange-box {
+  width: 275px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px #fcced3;
+}
+
+.exchange-box > p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.button-box {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.button-box > button {
+  height: 45px;
+  width: 275px;
+  font-family: inherit;
+  font-size: 17px;
+  border: transparent;
+  background-color: #2cb1ba;
+  color: white;
+  border-radius: 5px;
+  margin: 20px auto 60px auto;
+}
+
+.form-section > button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 1px #e4e4e4;
+}
+
+footer > p {
+  font-size: 12px;
+}
+
+footer > p > a {
+  text-decoration: none;
+  font-weight: 700;
+  color: inherit;
+}
+
+footer > p > a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer > p > b {
+  font-weight: 700;
 }

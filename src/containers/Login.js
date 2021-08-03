@@ -43,7 +43,9 @@ const Login = ({ setUser }) => {
         />
         <button type="submit">Se connecter</button>
         {/* <p>{errorMessage}</p> */}
-        <Link to="/signup">Pas encore de compte ? Inscris-toi !</Link>
+        <Link to="/signup" className="other-form">
+          Pas encore de compte ? Inscris-toi !
+        </Link>
       </form>
     </div>
   );

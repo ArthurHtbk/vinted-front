@@ -33,7 +33,7 @@ const Signup = ({ setUser }) => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
         <h1>S'inscrire</h1>
         <input
@@ -53,7 +53,9 @@ const Signup = ({ setUser }) => {
         />
         <p>{errorMessage}</p>
         <button type="submit">S'inscrire</button>
-        <Link to="/login">Tu as déjà un compte ? Connecte-toi !</Link>
+        <Link to="/login" className="other-form">
+          Tu as déjà un compte ? Connecte-toi !
+        </Link>
       </form>
     </div>
   );

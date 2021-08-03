@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import tearEffect from "../assets/images/tear-effect.svg";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [data, setData] = useState();
@@ -31,7 +32,9 @@ const Home = () => {
         <div className="hero-container">
           <div className="call-to-action">
             <h1>Prêts à faire du tri dans vos placards ?</h1>
-            <button>Vends maintenant</button>
+            <Link to="/publish">
+              <button className="sell-now">Vends maintenant</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -56,6 +59,7 @@ const Home = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
