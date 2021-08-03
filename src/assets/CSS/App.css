@@ -1,5 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
+  -moz-osx-font-smoothing: greyscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 header {
@@ -87,6 +89,14 @@ header {
 .logout:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.signup:focus,
+.login:focus,
+.sell:focus,
+.sell-now:focus,
+.logout:focus {
+  outline: none;
 }
 
 .signup {
@@ -198,6 +208,7 @@ h2 {
 
 .offer {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   border-left: solid#e4e4e4 2px;
 }
@@ -314,7 +325,7 @@ h3 {
   text-decoration: underline;
 }
 
-.info > button {
+.buy {
   background-color: #2cb1ba;
   color: #fff;
   border: transparent;
@@ -322,9 +333,10 @@ h3 {
   height: 35px;
   font-size: 17px;
   font-family: inherit;
+  width: 100%;
 }
 
-.info > button:hover {
+.buy:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -546,6 +558,88 @@ textarea:focus {
   cursor: pointer;
 }
 
+.payment-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebedee;
+}
+
+.payment-box {
+  width: 450px;
+  background-color: #fff;
+  margin-bottom: 2px;
+  padding: 20px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.small-grey {
+  color: #666;
+  font-size: 13px;
+  margin: 20px;
+  text-decoration: underline;
+}
+
+.sum-up {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sum-up > span {
+  color: #666;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.last-step {
+  margin: 30px 20px 20px 20px;
+  padding-bottom: 30px;
+  line-height: 20px;
+  border-bottom: 2px solid #d5d5d5;
+}
+
+.pay-form {
+  margin: 20px;
+}
+
+.buy-button {
+  height: 45px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 17px;
+  border: transparent;
+  background-color: #2cb1ba;
+  color: white;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.buy-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.done {
+  height: 45px;
+  width: calc(100% - 40px);
+  font-size: 17px;
+  border: solid 1px #2cb1ba;
+  background-color: white;
+  color: #2cb1ba;
+  border-radius: 5px;
+  margin: 50px 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   height: 80px;
   display: flex;
@@ -569,6 +663,166 @@ footer > p > a:hover {
   text-decoration: underline;
 }
 
-footer > p > b {
+b {
   font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .sell-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    padding: 0 10px;
+    line-height: 30px;
+  }
+
+  .signup {
+    margin-right: 0px;
+  }
+
+  .signup,
+  .login,
+  .logout {
+    height: 30px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 10px;
+  }
+
+  .signup,
+  .login {
+    width: 75px;
+  }
+
+  .top-bar > form {
+    width: 20%;
+    position: relative;
+  }
+
+  .top-bar > form > input::placeholder {
+    color: #f5f6f7;
+  }
+
+  .call-to-action {
+    width: 90vw;
+    height: 152px;
+    background-color: #fff;
+    position: absolute;
+    top: 470px;
+    left: 50vw;
+    display: flex;
+    flex-direction: column;
+    padding: 54px 24px;
+    border-radius: 3px;
+    box-shadow: none;
+    transform: translate(-50%);
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 300px;
+  }
+
+  .offer-container {
+    background-color: #e4e4e4;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 150px;
+  }
+
+  .box1 {
+    height: 50vh;
+    width: 40vh;
+    box-shadow: 0 0 10px #c1c1c1;
+  }
+
+  .box1,
+  .box2 {
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px #c1c1c1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    display: none;
+    height: 65vh;
+    margin-top: 65px;
+    background-image: url(../images/Vinted_hero.jpg);
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+  }
+
+  .top-bar > form {
+    flex: 0.8;
+    position: relative;
+  }
+
+  .sell-button {
+    display: block;
+    align-items: center;
+    position: absolute;
+    top: 66px;
+    right: 30px;
+    background-color: #fff;
+  }
+
+  .signup,
+  .login,
+  .logout {
+    margin-right: 20px;
+    height: 30px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 10px;
+  }
+
+  .logout {
+    position: absolute;
+    top: 85px;
+    left: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 150px;
+  }
 }
