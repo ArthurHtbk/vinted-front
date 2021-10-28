@@ -14,7 +14,7 @@ const Login = ({ setUser }) => {
     try {
       event.preventDefault();
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/login",
+        "https://vinted-backend-reacteur.herokuapp.com/user/login",
         { email: email, password: password }
       );
       if (response.data.token) {

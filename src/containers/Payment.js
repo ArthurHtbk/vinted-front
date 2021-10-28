@@ -53,7 +53,7 @@ const Payment = ({ userToken }) => {
         </div>
         <p className="last-step">
           Il ne vous reste plus qu'une étape pour vous offrir <b>{title}</b>.
-          vous allez payer <b>{total} €</b> (frais de protection et frais de
+          Vous allez payer <b>{total} €</b> (frais de protection et frais de
           port inclus).
         </p>
         <Elements stripe={stripePromise}>
