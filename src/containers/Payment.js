@@ -57,7 +57,7 @@ const Payment = ({ userToken }) => {
           port inclus).
         </p>
         <Elements stripe={stripePromise}>
-          <CheckoutForm title={title} price={price} />
+          <CheckoutForm title={title} price={total} />
         </Elements>
       </div>
     </div>
