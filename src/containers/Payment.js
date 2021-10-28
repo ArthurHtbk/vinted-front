@@ -4,7 +4,9 @@ import { Elements } from "@stripe/react-stripe-js";
 import { useLocation } from "react-router-dom";
 import CheckoutForm from "../components/CheckoutForm";
 
-const stripePromise = loadStripe("pk_test_5z9rSB8XwuAOihoBixCMfL6X");
+const stripePromise = loadStripe(
+  "pk_test_51JKLc4JNLRhs6L87eJhRjq7MkSn3rMkXuEamu88GPip0XTmewi0CM134v8uWuAY9IpqMeCTEUWcrODWJ9WEDKpGK00pFIT1HPm"
+);
 
 const Payment = ({ userToken }) => {
   const location = useLocation();
