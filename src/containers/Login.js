@@ -18,7 +18,6 @@ const Login = ({ setUser }) => {
         { email: email, password: password }
       );
       if (response.data.token) {
-        console.log(response.data.token);
         setUser(response.data.token);
         history.push("/");
       }
