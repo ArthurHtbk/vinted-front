@@ -65,6 +65,7 @@ header {
 .login-buttons {
   display: flex;
   align-items: center;
+  margin-right: 50px;
 }
 
 .login-buttons > a:hover {
@@ -667,6 +668,10 @@ b {
   font-weight: 700;
 }
 
+.header-buttons {
+  display: flex;
+}
+
 @media (max-width: 1024px) {
   .sell-button {
     display: none;
@@ -769,30 +774,28 @@ b {
     margin-bottom: 30px;
   }
 
-  .login-buttons {
+  .header-buttons {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     position: absolute;
     top: 66px;
-    left: 0;
     background-color: #fff;
-    width: 100vw;
+    left: calc(50vw - 140px);
+    border-bottom: solid #e4e4e4 1px;
+  }
+
+  .sell-button {
+    display: flex;
+    line-height: 50px;
+    margin-right: 10px;
+  }
+
+  .login-buttons {
+    line-height: 50px;
   }
 
   .top-bar > form {
     flex: 0.8;
     position: relative;
-  }
-
-  .sell-button {
-    display: block;
-    align-items: center;
-    position: absolute;
-    top: 66px;
-    right: 30px;
-    background-color: #fff;
   }
 
   .signup,
@@ -805,10 +808,8 @@ b {
     font-size: 10px;
   }
 
-  .logout {
-    position: absolute;
-    top: 85px;
-    left: 30px;
+  .signup-link {
+    display: none;
   }
 
   h2 {
