@@ -19,7 +19,7 @@ const Payment = ({ userToken }) => {
   // console.log(price);
   // console.log(buyerFees);
   // console.log(deliveryFees);
-  // console.log(total);
+  console.log(total);
 
   return userToken ? (
     <div className="payment-container">
@@ -59,7 +59,7 @@ const Payment = ({ userToken }) => {
           port inclus).
         </p>
         <Elements stripe={stripePromise}>
-          <CheckoutForm title={title} price={total} />
+          <CheckoutForm title={title} price={total} userToken={userToken} />
         </Elements>
       </div>
     </div>

@@ -2,29 +2,38 @@ import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import axios from "axios";
 
-const CheckoutForm = ({ title, price }) => {
+import Done from "./Done";
+
+const CheckoutForm = ({ title, price, userToken }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [completed, setCompleted] = useState(false);
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    const cardElement = elements.getElement(CardElement);
-    const stripeResponse = await stripe.createToken(cardElement);
-    console.log(stripeResponse);
-    const stripeToken = stripeResponse.token.id;
-    const response = await axios.post(
-      "https://vinted-backend-reacteur.herokuapp.com/offer/payment",
-      {
-        token: stripeToken,
-        title: title,
-        amount: price,
+    try {
+      event.preventDefault();
+      const cardElement = elements.getElement(CardElement);
+      const stripeResponse = await stripe.createToken(cardElement, {
+        name: userToken,
+      });
+      console.log(stripeResponse);
+      const stripeToken = stripeResponse.token.id;
+      const response = await axios.post(
+        "https://vinted-backend-reacteur.herokuapp.com/payment",
+        {
+          stripeToken,
+          title,
+          price,
+        }
+      );
+      console.log(`response.data: ${response.data}`);
+      if (response.data.status === "succeeded") {
+        setCompleted(true);
       }
-    );
-    if (response.data.status === "succeeded") {
-      setCompleted(true);
+    } catch (error) {
+      console.log(error.response);
+      console.log(error.message);
     }
-    console.log(response.data);
   };
 
   return !completed ? (
@@ -35,9 +44,7 @@ const CheckoutForm = ({ title, price }) => {
       </button>
     </form>
   ) : (
-    <div className="done">
-      <p>Paiement validé !</p>
-    </div>
+    <Done />
   );
 };
 

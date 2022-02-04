@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vinted copy
 
-## Available Scripts
+![Vinted copy](https://github.com/ArthurHtbk/vinted-front/blob/main/vinted_preview.png)
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+Welcome to the front-end repository of my Marvel tribute!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Let me introduce you to my first ever full-stack website! It is a copy of the website Vinted, including -but not limited to- features such as account creation and authentication, payment and the possibility to add new offers. Here are the pages available on the website:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- /
+- /signup
+- /login
+- /offer:id
+- /publish
+- /payment
 
-### `yarn test`
+User needs to be authenticated in order to access the "/publish" and "/payment" page.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Packages & dependencies
 
-### `yarn build`
+- [Font Awesome](https://fontawesome.com/) (solid)
+- [Axios](https://www.npmjs.com/package/axios)
+- [react-stripe-js](https://www.npmjs.com/package/@stripe/react-stripe-js)
+- [stripe-js](https://www.npmjs.com/package/@stripe/stripe-js)
+- [js-cookie](https://www.npmjs.com/package/js-cookie)
+- [react-router-dom](https://www.npmjs.com/package/js-cookie)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Make yourself at home
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Feel free to use this repository!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Clone
 
-### `yarn eject`
+```bash
+git clone https://github.com/ArthurHtbk/vinted-front.git
+cd vinted-front
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Install packages & dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Run in development mode
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+Then open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Check this out!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **[My Vinted copy](https://dazzling-wing-bf1551.netlify.app/)**
+- **The corresponding [back-end repository](https://github.com/ArthurHtbk/vinted)**
