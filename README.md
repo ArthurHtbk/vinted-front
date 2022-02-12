@@ -53,5 +53,5 @@ Then open [http://localhost:3000](http://localhost:3000) to view it in your brow
 
 ## Check this out!
 
-- **[My Vinted copy](https://dazzling-wing-bf1551.netlify.app/)**
+- **[My Vinted copy](https://vinted-copy-arthur.netlify.app)**
 - **The corresponding [back-end repository](https://github.com/ArthurHtbk/vinted)**
